@@ -1,0 +1,76 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\newcommand{\requirement}[7]{
+    \bgroup{}
+    \def\arraystretch{1.25}
+    \begin{center}
+        \begin{tabular}{ |l|p{9cm}| }
+            \hline
+            \multicolumn{2}{|c|}{\textbf{Test-#1}} \\
+            \hline
+            \textbf{Nome} & #2 \\
+            \hline
+            \textbf{Riferimento} & #3 \\
+            \hline
+            \textbf{Descrizione} & #4 \\
+            \hline
+            \textbf{Prerequisiti} &
+            \begin{itemize}
+                #5
+            \end{itemize} \\
+            \hline
+            \textbf{Procedura} &
+            \begin{itemize}
+                #6
+            \end{itemize} \\
+            \hline
+            \textbf{Risultati attesi} & #7 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \egroup{}
+}
+\subsection{Protocollo di test}
+
+Definire in modo accurato tutti i test che devono essere realizzati per
+garantire l’adempimento delle richieste formulate nei requisiti. I test
+fungono da garanzia di qualità del prodotto. Ogni test deve essere
+ripetibile alle stesse condizioni.
+
+
+\requirement{00}
+    {Proof-of-work}
+    {Req-00}
+    {A private key file}
+    {\item Start a miner with the given private key. Given some time the node should mine some blocks}
+    {\item test}
+    {ok}
+
+\subsection{Risultati test}
+
+\bgroup{}
+\def\arraystretch{1.25}
+\begin{center}
+    \begin{tabular}{ |l|l|l| }
+        \hline
+        \textbf{ID} & Result & Note \\
+        \hline
+        \textbf{Test-00} & \color{darckgreen} Passed & The node mines blocks \\
+        \hline
+        \textbf{Test-01} & \color{darckgreen} Passed & The nodes connect to eachother \\
+        \hline
+        \textbf{Test-02} & \color{red} Failed & The compiler is not done \\
+        \hline
+    \end{tabular}
+\end{center}
+\egroup{}
+
+\subsection{Mancanze/limitazioni conosciute}
+Descrizione con motivazione di eventuali elementi mancanti o non
+completamente implementati, al di fuori dei test case. Non devono essere
+riportati gli errori e i problemi riscontrati e poi risolti durante il
+progetto.
+
+
+\end{document}  
