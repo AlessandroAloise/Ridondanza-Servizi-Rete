@@ -12,14 +12,3 @@
 ## Descrizione
 #### Mandato:
 [QdC Ridondanza Servizi Rete](/1_QdC/QdC_SAMT_2022-23_Network_Services_Redundancy.pdf)
-
-
-#### Struttura:
-- [Documentazione](/3_Documentazione/Documentazione_Progetto_Ridondanza_Servizi_Rete.md)
-- [Gantt preventivo](/7_Allegati/GANTT_Preventivo.mpp)
-
-
-- [Diari di lavoro](4_Diari/)
-
-
-
