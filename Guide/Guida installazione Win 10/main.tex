@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[italian]{babel} % information in Italian
+\usepackage{titlesec}  % to have more sub chapters
+\usepackage{fancyhdr} % page header
+\usepackage{hyperref} % hyper references and document setup
+\usepackage{biblatex} % references
+\usepackage{fancybox} % oval boxes
+\usepackage{subfiles} % project structure - best loaded last in the preamble
+\usepackage{xcolor} % colored text standard 
+
+
+
+\pagestyle{fancy}
+\addbibresource{Contents/sitografia.bib}
+\definecolor{darckgreen}{rgb}{0.0, 0.5, 0.0}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+}
+
+\fancypagestyle{header-firstpage}
+{
+    \setlength\headheight{26pt}
+    \fancyhf{}
+    \lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=1cm]{Images/logoCPT.jpg}} \end{picture}}
+    \fancyhead[CE,CO]{Scuola Arti e Mestieri Trevano \\ Sezione Informatica}
+    \fancyfoot[L]{Titolo del progetto:  Ridondanza Servizi Rete \\ Alunno: Alessandro Aloise \\ Classe: I4AC \\ Anno scolastico: 2022/23 \\ Docente responsabile: Pascal Poncini}
+}
+
+\fancypagestyle{header-pages}
+{
+
+    \setlength\headheight{26pt}
+    \fancyhf{}
+    \lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=1cm]{Images/logoCPT.jpg}} \end{picture}}
+    \fancyhead[CE,CO]{Scuola Arti e Mestieri Trevano \\  Guida Installazione Windows 10 Education}
+    \fancyfoot[L]{Alessandro Aloise I4AC}
+    \fancyfoot[R]{\thepage}
+    
+}
+
+
+\thispagestyle{header-firstpage}
+
+\begin{document}
+
+{\LARGE Guida Installazione Windows 10 Education}
+
+\pagebreak{}
+\thispagestyle{header-pages}
+\tableofcontents
+
+\pagebreak{}
+\thispagestyle{header-pages}
+
+\section{Introduzione}
+\subfile{Contents/introduzione.tex}
+\pagebreak{}
+
+
+\section{Installazione}
+\subfile{Contents/installazione.tex}
+\pagebreak{}
+
+\thispagestyle{header-pages}
+\section{Configurazione}
+\subfile{Contents/configurazione.tex}
+
+\end{document}
